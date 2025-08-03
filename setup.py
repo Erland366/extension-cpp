@@ -25,6 +25,8 @@ else:
 
 
 def get_extensions():
+    os.environ["CC"] = "gcc-11"
+    os.environ["CXX"] = "g++-11"
     debug_mode = os.getenv("DEBUG", "0") == "1"
     use_cuda = os.getenv("USE_CUDA", "1") == "1"
     if debug_mode:
